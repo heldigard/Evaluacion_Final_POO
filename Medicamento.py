@@ -8,6 +8,8 @@ class Medicamento:
             precio_neto,
             peso,
             cantidad,
+            presentacion,
+            es_restringido,
             impuesto=0.19
     ):
         self.__sku = sku
@@ -16,6 +18,8 @@ class Medicamento:
         self.__precio_neto = precio_neto
         self.__peso = peso
         self.__cantidad = cantidad
+        self.__presentacion = presentacion
+        self.__es_restringido = es_restringido
         self.__impuesto = impuesto
 
         self.__calcular_precio_bruto()
@@ -49,7 +53,8 @@ class Medicamento:
       Peso: {self.__peso}\t \n\
       Precio Neto: {self.__precio_neto}\t \n\
       Precio Bruto: {self.__precio_bruto}\t \n\
-      Cantidad: {self.__cantidad}\t \n"""
+      Cantidad: {self.__cantidad}\t \n\
+      Es Restringido: {self.__es_restringido}\t \n"
 
     def __calcular_precio_bruto(self):
         self.__precio_bruto = self.__precio_neto + (self.__precio_neto * self.__impuesto)
