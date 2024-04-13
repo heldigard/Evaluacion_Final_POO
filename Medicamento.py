@@ -8,7 +8,7 @@ class Medicamento:
             precio_neto,
             peso,
             cantidad,
-            impuesto=0.19
+            impuesto=0.2
     ):
         self.__sku = sku
         self.__nombre_comercial = nombre_comercial
