@@ -1,21 +1,21 @@
-ÔªøSKU,Nombre comercial,Nombre gen√©rico,Precio neto ($),Peso (g),Cantidad,Presentacion,Es Restringido
-MED001,Acetaminof√©n,Paracetamol,1500,10 mg,20,tabletas,No
-MED002,Ibuprofeno,Ibuprofeno,2000,200 mg,10,c√°psulas,No
-MED003,√Åcido acetilsalic√≠lico,AAS,1000,500 mg,30,comprimidos,No
-MED004,Loratadina,Loratadina,5000,10 mg,15,tabletas,No
-MED005,Cetirizina,Cetirizina,4000,10 mg,20,comprimidos,No
-MED006,Omeprazol,Omeprazol,7000,20 mg,14,c√°psulas,No
-MED007,Metformina,Metformina,3500,500 mg,30,comprimidos,S√≠
-MED008,Losartan,Losartan,8000,50 mg,30,comprimidos,S√≠
-MED009,Atorvastatina,Atorvastatina,12000,10 mg,30,comprimidos,S√≠
-MED010,Alprazolam,Alprazolam,6000,0.5 mg,30,comprimidos,S√≠
-MED011,Diazepam,Diazepam,4500,5 mg,20,comprimidos,S√≠
-MED012,Amoxicilina,Amoxicilina,8500,500 mg,20,c√°psulas,S√≠
-MED013,Azitromicina,Azitromicina,11000,500 mg,6,comprimidos,S√≠
-MED014,Ciprofloxacino,Ciprofloxacino,9000,500 mg,10,comprimidos,S√≠
-MED015,Levotiroxina,Levotiroxina,5500,100 mcg,30,comprimidos,S√≠
-MED016,Salbutamol,Salbutamol,4000,100 mcg/ml,1,inhalador,No
-MED017,Dexametasona,Dexametasona,3000,0.5 mg,20,comprimidos,S√≠
-MED018,Prednisona,Prednisona,2500,5 mg,30,comprimidos,S√≠
-MED019,Ibuprofeno pedi√°trico,Ibuprofeno,1200,100 mg,10,sobres,No
-MED020,Paracetamol pedi√°trico,Paracetamol,1000,160 mg,12,jarabe,No
+SKU,Nombre comercial,Nombre genÈrico,Precio neto ($),Peso (g),Cantidad,Es Restringido,Dosis_max_dia,Containdicaciones
+MED001,AcetaminofÈn,Paracetamol,1500,10 mg,20,No,,enfermedad hep·tica grave| enfermedad renal con uremia| complicaciones agudas de la diabetes| cirugÌa| colapso cardiovascular| estados asociados a hipoxemia
+MED002,Ibuprofeno,Ibuprofeno,2000,200 mg,10,No,,˙lceras| hemorragias| perforaciones en el esÛfago| perforaciones en el estÛmago o el intestino
+MED003,¡cido acetilsalicÌlico,AAS,1000,500 mg,30,No,,˙lcera gastrointestinal| molestias g·stricas de repeticiÛn y antecedentes de hemorragia gastrointestinal
+MED004,Loratadina,Loratadina,5000,10 mg,15,No,,insuficiencia hep·tica| asma aguda| hipertrofia prost·tica| retenciÛn urinaria| glaucoma
+MED005,Cetirizina,Cetirizina,4000,10 mg,20,No,,somnolencia| cansancio excesivo| boca seca| dolor de estÛmago| diarrea| vÛmitos
+MED006,Omeprazol,Omeprazol,7000,20 mg,14,No,,sarpullido| urticaria| picazÛn| hinchazÛn de los ojos| cara| labios| boca| garganta o lengua| dificultad para respirar o tragar o ronquera
+MED007,Metformina,Metformina,3500,500 mg,30,SÌ,650 mg,
+MED008,Losartan,Losartan,8000,50 mg,30,SÌ,750 mg ,
+MED009,Atorvastatina,Atorvastatina,12000,10 mg,30,SÌ,300 mg,
+MED010,Alprazolam,Alprazolam,6000,0.5 mg,30,SÌ,290 mg,
+MED011,Diazepam,Diazepam,4500,5 mg,20,SÌ,120 mg,
+MED012,Amoxicilina,Amoxicilina,8500,500 mg,20,SÌ,700 mg,
+MED013,Azitromicina,Azitromicina,11000,500 mg,6,SÌ,860 mg,
+MED014,Ciprofloxacino,Ciprofloxacino,9000,500 mg,10,SÌ,75 mg,
+MED015,Levotiroxina,Levotiroxina,5500,100 mcg,30,SÌ,67 mcg,
+MED016,Salbutamol,Salbutamol,4000,100 mcg/ml,1,No,,diabetes mellitus| infecciones virales| bacterianas o micÛticas| tuberculosis o ˙lcera pÈptica activa| glaucoma| insuficiencia hep·tica o renal| osteoporosis| psicosis o tendencias psicÛticas
+MED017,Dexametasona,Dexametasona,3000,0.5 mg,20,SÌ,85 mg,
+MED018,Prednisona,Prednisona,2500,5 mg,30,SÌ,150 mg,
+MED019,Ibuprofeno pedi·trico,Ibuprofeno,1200,100 mg,10,No,,somnolencia| cansancio excesivo| boca seca| dolor de estÛmago| diarrea| vÛmitos
+MED020,Paracetamol pedi·trico,Paracetamol,1000,160 mg,12,No,,sarpullido| urticaria| picazÛn| hinchazÛn de los ojos| cara| labios| boca| garganta o lengua| dificultad para respirar o tragar o ronquera

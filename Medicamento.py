@@ -50,4 +50,10 @@ class Medicamento:
         {self.__es_restringido:3}\t \n"
 
 
-medicamento1 = Medicamento("MED001", "Acetaminofén", "Paracetamol", "1500", "10 mg", "2", "No")
+medicamento1 = Medicamento("MED001",
+                           "Acetaminofén",
+                           "Paracetamol",
+                           "1500",
+                           "10 mg",
+                           "2",
+                           "No")
