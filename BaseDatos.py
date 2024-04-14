@@ -34,5 +34,5 @@ class BaseDatos:
         return inventario
 
 
-db = BaseDatos()
-db.leer_inventario_desde_archivo('MedicamentosInventario.csv')
+
+
