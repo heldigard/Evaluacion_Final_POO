@@ -18,11 +18,8 @@ class Medicamento:
         self.__precio_neto = precio_neto
         self.__peso = peso
         self.__cantidad = cantidad
-        self.__presentacion = presentacion
         self.__es_restringido = es_restringido
         self.__impuesto = impuesto
-
-        self.__calcular_precio_bruto()
 
     @property
     def sku(self):
@@ -58,3 +55,5 @@ class Medicamento:
 
     def __calcular_precio_bruto(self):
         self.__precio_bruto = self.__precio_neto + (self.__precio_neto * self.__impuesto)
+
+medicamento1= Medicamento("MED001","Acetaminofén", "Paracetamol", "1500", "10 mg", "2", "No")

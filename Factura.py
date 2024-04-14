@@ -27,6 +27,7 @@ class Factura:
         self.subtotal = self.calcular_subtotal()
         self.total = self.calcular_total()
 
+
     def __str__(self):
         factura = f"{self.empresa}\n\n"
         factura += f"{'Código':6}\t{'Nombre':15}\t{'Precio':7}\t{'Impuesto':8}\t{'Cantidad':8}\t{'Subtotal':8}\t{'Total':7}\n"
