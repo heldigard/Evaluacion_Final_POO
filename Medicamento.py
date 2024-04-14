@@ -8,7 +8,6 @@ class Medicamento:
             precio_neto,
             peso,
             cantidad,
-            presentacion,
             es_restringido,
             impuesto=0.19
     ):
@@ -36,24 +35,19 @@ class Medicamento:
     @precio_neto.setter
     def precio_neto(self, precio_neto):
         self.__precio_neto = precio_neto
-        self.__calcular_precio_bruto()
 
     @cantidad.setter
     def cantidad(self, cantidad):
         self.__cantidad = cantidad
 
     def __str__(self):
-        return f"\n\
-      Código: {self.__sku}\t \n\
-      Nombre Comercial: {self.__nombre_comercial}\t \n\
-      Nombre Genérico: {self.__nombre_generico}\t \n\
-      Peso: {self.__peso}\t \n\
-      Precio Neto: {self.__precio_neto}\t \n\
-      Precio Bruto: {self.__precio_bruto}\t \n\
-      Cantidad: {self.__cantidad}\t \n\
-      Es Restringido: {self.__es_restringido}\t \n"
+        return f"{self.__sku:8}\t\
+        {self.__nombre_comercial:15}\t\
+        {self.__nombre_generico:15}\t\
+        {self.__peso:6}\t\
+        {self.__precio_neto:6}\t\
+        {self.__cantidad:6}\t\
+        {self.__es_restringido:3}\t \n"
 
-    def __calcular_precio_bruto(self):
-        self.__precio_bruto = self.__precio_neto + (self.__precio_neto * self.__impuesto)
 
-medicamento1= Medicamento("MED001","Acetaminofén", "Paracetamol", "1500", "10 mg", "2", "No")
+medicamento1 = Medicamento("MED001", "Acetaminofén", "Paracetamol", "1500", "10 mg", "2", "No")

@@ -1,7 +1,7 @@
 import Medicamento
 
 
-class VentaLibre(Medicamento):
+class MedicamentoVentaLibre(Medicamento):
     def __init__(
             self,
             codigo,
@@ -22,4 +22,4 @@ class VentaLibre(Medicamento):
             sin_impuesto,
             impuesto
         )
-        self.contraindicaciones = []
+        self.contraindicaciones = contraindicaciones

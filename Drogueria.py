@@ -16,3 +16,12 @@ class Drogueria:
         self.__inventario = db.leer_inventario_desde_archivo(
             'MedicamentosInventario.csv'
         )
+
+    def mostrar_inventario(self):
+        for sku in self.__inventario.keys():
+            medicamento = self.__inventario[sku]
+            print(medicamento)
+
+
+d = Drogueria('Drogueria', '123456789', '123456789')
+d.mostrar_inventario()

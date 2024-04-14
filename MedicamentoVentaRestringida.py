@@ -2,7 +2,7 @@ import Medicamento
 import Medico
 
 
-class VentaRestringida(Medicamento):
+class MedicamentoVentaRestringida(Medicamento):
     def __init__(
             self,
             codigo,
