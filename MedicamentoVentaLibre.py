@@ -28,4 +28,4 @@ class MedicamentoVentaLibre(Medicamento):
 
     def __str__(self):
         return f"{super().__str__()}\t\
-        Contraindicaciones: {self.contraindicaciones}"
+        Con Contraindicaciones"

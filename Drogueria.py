@@ -16,11 +16,21 @@ class Drogueria:
         )
 
     def mostrar_inventario(self):
+        cabecera = f"{'SKU':8}\t\
+        {'Nombre Comercial':20}\t\
+        {'Nombre Generico':20}\t\
+        {'Precio':6}\t\
+        {'Peso':10}\t\
+        {'Cant.':6}\t\
+        {'Restr.':6}\t\
+        {'Impuesto':4}\t\
+        {'Info':4}"
+        print(cabecera)
         for sku in self.__inventario.keys():
             medicamento = self.__inventario[sku]
             print(medicamento)
 
 
-d = Drogueria('Drogueria', '123456789', '123456789')
-d.inicializar_inventario()
-d.mostrar_inventario()
+drogueria = Drogueria('Drogueria', '123456789', '123456789')
+drogueria.inicializar_inventario()
+drogueria.mostrar_inventario()
