@@ -25,7 +25,10 @@ class Drogueria:
         {'Restr.':6}\t\
         {'Impuesto':4}\t\
         {'Info':4}"
+        print('-' * (len(cabecera) + 35))
         print(cabecera)
+        print('-' * (len(cabecera) + 35))
+
         for sku in self.__inventario.keys():
             medicamento = self.__inventario[sku]
             print(medicamento)
