@@ -25,6 +25,13 @@ class Drogueria:
     def medicos(self):
         return self.__medicos
 
+    @property
+    def facturas(self):
+        return self.__facturas
+
+    def add_factura(self, factura: Factura):
+        self.__facturas.append(factura)
+
     def inicializar_datos(self):
         self.__inicializar_inventario()
         self.__inicializar_clientes()

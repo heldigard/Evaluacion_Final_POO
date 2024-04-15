@@ -3,6 +3,7 @@ class Factura:
     razon_social = "Droguería EIA SAS BIC"
 
     def __init__(self):
+        self.cliente = None
         self.subtotal = 0
         self.total = 0
         self.empresa = "Droguería EIA SAS BIC"
@@ -26,7 +27,6 @@ class Factura:
     def facturar(self):
         self.subtotal = self.calcular_subtotal()
         self.total = self.calcular_total()
-
 
     def __str__(self):
         factura = f"{self.empresa}\n\n"
