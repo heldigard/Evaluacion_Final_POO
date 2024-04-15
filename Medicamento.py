@@ -44,8 +44,8 @@ class Medicamento:
         return f"{self.__sku:8}\t\
         {self.__nombre_comercial:20}\t\
         {self.__nombre_generico:20}\t\
-        {self.__precio_neto:6}\t\
-        {self.__peso:10}\t\
-        {self.__cantidad:6}\t\
-        {self.__es_restringido:6}\t\
-        {self.__impuesto:4}\t"
+        {self.__precio_neto:10}\t\t\
+        {self.__peso:8}\t\
+        {self.__cantidad:10}\t\t\t\
+        {'SI' if self.__es_restringido else 'NO':10}\t\t\
+        {self.__impuesto:10}\t"

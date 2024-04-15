@@ -32,15 +32,16 @@ class Drogueria:
         )
 
     def mostrar_inventario(self):
-        cabecera = f"{'SKU':8}\t\
-        {'Nombre Comercial':20}\t\
-        {'Nombre Generico':20}\t\
-        {'Precio':6}\t\
-        {'Peso':10}\t\
-        {'Cant.':6}\t\
-        {'Restr.':6}\t\
-        {'Impuesto':4}\t\
-        {'Info':4}"
+        cabecera = f"{'SKU':2}\t\
+                {'N. Comercial':15}\t\
+                {'N. Generico':18}\t\
+                {'Precio':1}\t\
+                {'Peso':1}\t\
+                {'Cant':1}\t\
+                {'Restr':1}\t\
+                {'IVA':1}\t\
+                {'Info':1}"
+        print("\nInventario de Medicamentos")
         print('-' * (len(cabecera) + 35))
         print(cabecera)
         print('-' * (len(cabecera) + 35))
@@ -50,19 +51,27 @@ class Drogueria:
             print(medicamento)
 
     def mostrar_clientes(self):
-        cabecera = f"{'Cedula':6}\t\
-                {'Nombre':8}\t\
+        cabecera = f"{'Cedula':2}\t\
+                {'Nombre':14}\t\
                 {'Telefono':10}\t\
                 {'Direccion':20}"
-        print('-' * (len(cabecera) + 15))
+        print("\nLista de Clientes")
+        print('-' * (len(cabecera) + 10))
         print(cabecera)
-        print('-' * (len(cabecera) + 15))
+        print('-' * (len(cabecera) + 10))
 
         for cedula in self.__clientes.keys():
             cliente = self.__clientes[cedula]
             print(cliente)
 
+    def mostrar_medicos(self):
+        cabecera = f"{'Nombre':18}\t\
+                {'Telefono':10}\t\
+                {'Especialidad':20}"
+        print("\nLista de Medicos")
+        print('-' * (len(cabecera) + 10))
+        print(cabecera)
+        print('-' * (len(cabecera) + 10))
 
-drogueria = Drogueria('Drogueria', '123456789', '123456789')
-drogueria.inicializar_datos()
-drogueria.mostrar_clientes()
+        for medico in self.__medicos:
+            print(medico)
