@@ -47,5 +47,5 @@ class Medicamento:
         {self.__precio_neto:6}\t\
         {self.__peso:10}\t\
         {self.__cantidad:6}\t\
-        {self.__es_restringido:3}\t\
+        {self.__es_restringido:6}\t\
         {self.__impuesto:4}\t"

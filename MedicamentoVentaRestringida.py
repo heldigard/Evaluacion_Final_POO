@@ -37,6 +37,8 @@ class MedicamentoVentaRestringida(Medicamento):
         self.__medico = medico
 
     def __str__(self):
-        return f"{super().__str__()}\t\
-        Dosis maxima: {self.__dosis_maxima:7}\t\
-        Medico: {self.__medico}"
+        mensaje = f"{super().__str__()}\t\
+        Dosis: {self.__dosis_maxima:7}\t"
+        if self.__medico:
+            mensaje = mensaje + f"Medico: {self.__medico}"
+        return mensaje
