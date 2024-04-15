@@ -25,6 +25,14 @@ class Medicamento:
         return self.__sku
 
     @property
+    def nombre_comercial(self):
+        return self.__nombre_comercial
+
+    @property
+    def nombre_generico(self):
+        return self.__nombre_generico
+
+    @property
     def precio_neto(self):
         return self.__precio_neto
 
@@ -42,10 +50,10 @@ class Medicamento:
 
     def __str__(self):
         return f"{self.__sku:8}\t\
-        {self.__nombre_comercial:20}\t\
-        {self.__nombre_generico:20}\t\
+        {self.__nombre_comercial:25}\t\
+        {self.__nombre_generico:25}\t\
         {self.__precio_neto:10}\t\t\
         {self.__peso:8}\t\
         {self.__cantidad:10}\t\t\t\
-        {'SI' if self.__es_restringido else 'NO':10}\t\t\
+        {'SI' if self.__es_restringido else 'NO':10}\t\
         {self.__impuesto:10}\t"

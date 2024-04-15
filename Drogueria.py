@@ -33,8 +33,8 @@ class Drogueria:
 
     def mostrar_inventario(self):
         cabecera = f"{'SKU':2}\t\
-                {'N. Comercial':15}\t\
-                {'N. Generico':18}\t\
+                {'Nombre Comercial':15}\t\
+                {'Nombre Generico':18}\t\
                 {'Precio':1}\t\
                 {'Peso':1}\t\
                 {'Cant':1}\t\
@@ -49,6 +49,22 @@ class Drogueria:
         for sku in self.__inventario.keys():
             medicamento = self.__inventario[sku]
             print(medicamento)
+
+    def mostrar_inventario_cantidades(self):
+        cabecera = f"{'SKU':2}\t\
+                {'Nombre Comercial':20}\t\
+                {'Cant':1}\t"
+        print("\nResumen de Medicamentos")
+        print('-' * (len(cabecera) + 5))
+        print(cabecera)
+        print('-' * (len(cabecera) + 5))
+
+        for sku in self.__inventario.keys():
+            medicamento = self.__inventario[sku]
+            resumen = f"{sku:2}\t\
+            {medicamento.nombre_comercial:25}\t\
+            {medicamento.cantidad}"
+            print(resumen)
 
     def mostrar_clientes(self):
         cabecera = f"{'Cedula':2}\t\
@@ -75,3 +91,17 @@ class Drogueria:
 
         for medico in self.__medicos:
             print(medico)
+
+    def vender_medicamento(self, sku, cantidad):
+        if sku in self.__inventario:
+            if self.__inventario[sku].stock >= cantidad:
+                self.__inventario[sku].stock -= cantidad
+                return True
+            else:
+                return False
+
+
+drogueria = Drogueria('Drogueria', '123456789', '123456789')
+drogueria.inicializar_datos()
+drogueria.mostrar_inventario_cantidades()
+drogueria.mostrar_inventario()
