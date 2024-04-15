@@ -1,4 +1,4 @@
-from BaseDatos import BaseDatos
+from BaseDatos import *
 
 
 class Drogueria:
@@ -8,11 +8,27 @@ class Drogueria:
         self.__nit = nit
         self.__telefono = telefono
         self.__inventario = {}
-        self.__db = BaseDatos()
+        self.__clientes = {}
+        self.__medicos = []
 
-    def inicializar_inventario(self):
-        self.__inventario = self.__db.leer_inventario_desde_archivo(
+    def inicializar_datos(self):
+        self.__inicializar_inventario()
+        self.__inicializar_clientes()
+        self.__inicializar_medicos()
+
+    def __inicializar_inventario(self):
+        self.__inventario = leer_inventario_desde_archivo(
             'MedicamentosInventario.csv'
+        )
+
+    def __inicializar_clientes(self):
+        self.__clientes = leer_clientes_desde_archivo(
+            'Clientes.csv'
+        )
+
+    def __inicializar_medicos(self):
+        self.__medicos = leer_medicos_desde_archivo(
+            'Medicos.csv'
         )
 
     def mostrar_inventario(self):
@@ -35,5 +51,5 @@ class Drogueria:
 
 
 drogueria = Drogueria('Drogueria', '123456789', '123456789')
-drogueria.inicializar_inventario()
+drogueria.inicializar_datos()
 drogueria.mostrar_inventario()
