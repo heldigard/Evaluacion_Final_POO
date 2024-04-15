@@ -13,3 +13,7 @@ class Medico(Persona):
     @especialidad.setter
     def especialidad(self, especialidad):
         self.__especialidad = especialidad
+
+    def __str__(self):
+        return f"{super().__str__()}\t\
+        Especialidad: {self.especialidad}"

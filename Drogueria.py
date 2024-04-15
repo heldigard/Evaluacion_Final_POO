@@ -49,7 +49,20 @@ class Drogueria:
             medicamento = self.__inventario[sku]
             print(medicamento)
 
+    def mostrar_clientes(self):
+        cabecera = f"{'Cedula':6}\t\
+                {'Nombre':8}\t\
+                {'Telefono':10}\t\
+                {'Direccion':20}"
+        print('-' * (len(cabecera) + 15))
+        print(cabecera)
+        print('-' * (len(cabecera) + 15))
+
+        for cedula in self.__clientes.keys():
+            cliente = self.__clientes[cedula]
+            print(cliente)
+
 
 drogueria = Drogueria('Drogueria', '123456789', '123456789')
 drogueria.inicializar_datos()
-drogueria.mostrar_inventario()
+drogueria.mostrar_clientes()

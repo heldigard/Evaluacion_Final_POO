@@ -63,7 +63,7 @@ def leer_clientes_desde_archivo(ruta) -> dict:
                 nombre=nombre,
                 telefono=telefono,
                 cedula=cedula,
-                direccion=direccion
+                direccion=direccion.replace('"', '')
             )
 
     return clientes

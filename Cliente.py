@@ -22,3 +22,8 @@ class Cliente(Persona):
     @direccion.setter
     def direccion(self, direccion):
         self.__direccion = direccion
+
+    def __str__(self):
+        return f"{self.cedula:11}\t\
+        {super().__str__()}\t\
+        {self.direccion:20}"
