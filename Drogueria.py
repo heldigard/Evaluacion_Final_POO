@@ -1,4 +1,5 @@
 from BaseDatos import *
+from Factura import Factura
 
 
 class Drogueria:
@@ -10,6 +11,7 @@ class Drogueria:
         self.__inventario = {}
         self.__clientes = {}
         self.__medicos = []
+        self.__facturas = []
 
     def inicializar_datos(self):
         self.__inicializar_inventario()
@@ -100,8 +102,5 @@ class Drogueria:
             else:
                 return False
 
-
-drogueria = Drogueria('Drogueria', '123456789', '123456789')
-drogueria.inicializar_datos()
-drogueria.mostrar_inventario_cantidades()
-drogueria.mostrar_inventario()
+    def add_factura(self, factura: Factura):
+        self.__facturas.append(factura)
