@@ -1,3 +1,4 @@
+from Cliente import Cliente
 from MedicamentoVentaLibre import MedicamentoVentaLibre
 from MedicamentoVentaRestringida import MedicamentoVentaRestringida
 
@@ -9,7 +10,7 @@ class BaseDatos:
 
     def leer_inventario_desde_archivo(self, ruta) -> dict:
         inventario = {}
-        with open(ruta, 'r', encoding='latin-1') as archivo:
+        with open(ruta, 'r', encoding='utf-8') as archivo:
             cabeceras = archivo.readline()
 
             for linea in archivo:
@@ -48,3 +49,24 @@ class BaseDatos:
                     )
 
         return inventario
+
+    def leer_clientes_desde_archivo(self, ruta) -> dict:
+        clientes = {}
+        with open(ruta, 'r', encoding='utf-8') as archivo:
+            cabeceras = archivo.readline()
+
+            for linea in archivo:
+                vectorLinea = linea.strip().split(',')
+                cedula = vectorLinea[0]
+                nombre = vectorLinea[1]
+                telefono = vectorLinea[2]
+                direccion = vectorLinea[3]
+
+                clientes[cedula] = Cliente(
+                    nombre=nombre,
+                    telefono=telefono,
+                    cedula=cedula,
+                    direccion=direccion
+                )
+
+        return clientes
