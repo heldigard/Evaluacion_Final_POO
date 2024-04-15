@@ -13,6 +13,18 @@ class Drogueria:
         self.__medicos = []
         self.__facturas = []
 
+    @property
+    def inventario(self):
+        return self.__inventario
+
+    @property
+    def clientes(self):
+        return self.__clientes
+
+    @property
+    def medicos(self):
+        return self.__medicos
+
     def inicializar_datos(self):
         self.__inicializar_inventario()
         self.__inicializar_clientes()
@@ -96,8 +108,8 @@ class Drogueria:
 
     def vender_medicamento(self, sku, cantidad):
         if sku in self.__inventario:
-            if self.__inventario[sku].stock >= cantidad:
-                self.__inventario[sku].stock -= cantidad
+            if self.__inventario[sku].cantidad >= cantidad:
+                self.__inventario[sku].cantidad -= cantidad
                 return True
             else:
                 return False

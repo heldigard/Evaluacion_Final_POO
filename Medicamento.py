@@ -40,6 +40,18 @@ class Medicamento:
     def cantidad(self):
         return self.__cantidad
 
+    @property
+    def impuesto(self):
+        return self.__impuesto
+
+    @property
+    def peso(self):
+        return self.__peso
+
+    @property
+    def es_restringido(self):
+        return self.__es_restringido
+
     @precio_neto.setter
     def precio_neto(self, precio_neto):
         self.__precio_neto = precio_neto
