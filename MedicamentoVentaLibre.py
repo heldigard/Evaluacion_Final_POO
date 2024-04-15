@@ -1,25 +1,31 @@
-import Medicamento
+from Medicamento import Medicamento
 
 
 class MedicamentoVentaLibre(Medicamento):
     def __init__(
             self,
-            codigo,
+            sku,
             nombre_comercial,
             nombre_generico,
+            precio_neto,
             peso,
             cantidad,
-            sin_impuesto,
+            es_restringido,
             contraindicaciones,
             impuesto=0.19
     ):
         super().__init__(
-            codigo,
-            nombre_comercial,
-            nombre_generico,
-            peso,
-            cantidad,
-            sin_impuesto,
-            impuesto
+            sku=sku,
+            nombre_comercial=nombre_comercial,
+            nombre_generico=nombre_generico,
+            precio_neto=precio_neto,
+            peso=peso,
+            cantidad=cantidad,
+            es_restringido=es_restringido,
+            impuesto=impuesto
         )
         self.contraindicaciones = contraindicaciones
+
+    def __str__(self):
+        return f"{super().__str__()}\t\
+        Contraindicaciones: {self.contraindicaciones}"

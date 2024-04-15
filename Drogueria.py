@@ -8,12 +8,10 @@ class Drogueria:
         self.__nit = nit
         self.__telefono = telefono
         self.__inventario = {}
-
-        self.inicializar_inventario()
+        self.__db = BaseDatos()
 
     def inicializar_inventario(self):
-        db = BaseDatos()
-        self.__inventario = db.leer_inventario_desde_archivo(
+        self.__inventario = self.__db.leer_inventario_desde_archivo(
             'MedicamentosInventario.csv'
         )
 
@@ -24,4 +22,5 @@ class Drogueria:
 
 
 d = Drogueria('Drogueria', '123456789', '123456789')
+d.inicializar_inventario()
 d.mostrar_inventario()

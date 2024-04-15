@@ -42,18 +42,10 @@ class Medicamento:
 
     def __str__(self):
         return f"{self.__sku:8}\t\
-        {self.__nombre_comercial:15}\t\
-        {self.__nombre_generico:15}\t\
-        {self.__peso:6}\t\
+        {self.__nombre_comercial:20}\t\
+        {self.__nombre_generico:20}\t\
         {self.__precio_neto:6}\t\
+        {self.__peso:10}\t\
         {self.__cantidad:6}\t\
-        {self.__es_restringido:3}\t \n"
-
-
-medicamento1 = Medicamento("MED001",
-                           "Acetaminofén",
-                           "Paracetamol",
-                           "1500",
-                           "10 mg",
-                           "2",
-                           "No")
+        {self.__es_restringido:3}\t\
+        {self.__impuesto:4}\t"
