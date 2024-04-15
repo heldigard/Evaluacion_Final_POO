@@ -38,5 +38,5 @@ class MedicamentoVentaRestringida(Medicamento):
 
     def __str__(self):
         return f"{super().__str__()}\t\
-        Dosis maxima: {self.__dosis_maxima}\t\
+        Dosis maxima: {self.__dosis_maxima:7}\t\
         Medico: {self.__medico}"

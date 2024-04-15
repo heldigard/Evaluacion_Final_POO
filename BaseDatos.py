@@ -9,7 +9,7 @@ class BaseDatos:
 
     def leer_inventario_desde_archivo(self, ruta) -> dict:
         inventario = {}
-        with open(ruta, 'r', encoding='utf-8') as archivo:
+        with open(ruta, 'r', encoding='latin-1') as archivo:
             cabeceras = archivo.readline()
 
             for linea in archivo:
@@ -22,7 +22,7 @@ class BaseDatos:
                 cantidad = vectorLinea[5]
                 es_restringido = False if vectorLinea[6] == 'No' else True
                 dosis_maxima = vectorLinea[7]
-                contraindicaciones = vectorLinea[8].split(';')
+                contraindicaciones = vectorLinea[8].split('|')
 
                 if es_restringido:
                     inventario[sku] = MedicamentoVentaRestringida(
@@ -30,10 +30,10 @@ class BaseDatos:
                         nombre_comercial=nombre_comercial,
                         nombre_generico=nombre_generico,
                         precio_neto=float(precio_neto),
-                        peso=float(peso),
+                        peso=peso,
                         cantidad=int(cantidad),
                         es_restringido=es_restringido,
-                        dosis_maxima=int(dosis_maxima),
+                        dosis_maxima=dosis_maxima,
                     )
                 else:
                     inventario[sku] = MedicamentoVentaLibre(
@@ -41,7 +41,7 @@ class BaseDatos:
                         nombre_comercial=nombre_comercial,
                         nombre_generico=nombre_generico,
                         precio_neto=float(precio_neto),
-                        peso=float(peso),
+                        peso=peso,
                         cantidad=int(cantidad),
                         es_restringido=es_restringido,
                         contraindicaciones=contraindicaciones
