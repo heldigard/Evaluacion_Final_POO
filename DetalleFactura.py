@@ -1,4 +1,6 @@
 from Medicamento import Medicamento
+from MedicamentoVentaRestringida import MedicamentoVentaRestringida
+from MedicamentoVentaLibre import MedicamentoVentaLibre
 
 
 class DetalleFactura:
@@ -31,9 +33,31 @@ class DetalleFactura:
         return self.__medicamento.precio_neto * self.__cantidad
 
     def __str__(self):
-        return f"{self.medicamento.nombre_comercial:20}\t\
+        mensaje = f"{self.medicamento.nombre_comercial:20}\t\
         {self.medicamento.peso:8}\t\
         {self.medicamento.precio_neto:10}\t\
         {self.cantidad:8}\t\
         {self.subtotal:2}\t\
         {self.total:2}\n"
+
+        if type(self.medicamento) is MedicamentoVentaRestringida:
+            mensaje = mensaje + self.texto_medicamento_restringido(self.medicamento)
+        elif type(self.medicamento) is MedicamentoVentaLibre:
+            mensaje = mensaje + self.texto_medicamento_libre(self.medicamento)
+
+        mensaje = mensaje + "\n\n"
+        return mensaje
+
+    def texto_medicamento_restringido(self, medicamento: MedicamentoVentaRestringida):
+        mensaje = f"Dosis: {medicamento.dosis_maxima:7}\t"
+        if medicamento.medico:
+            mensaje = mensaje + f"Medico: {self.__medico}"
+
+        return mensaje
+
+    def texto_medicamento_libre(self, medicamento: MedicamentoVentaLibre):
+        mensaje = ""
+        if len(medicamento.contraindicaciones) > 0:
+            mensaje = f"Contraindicaciones: {medicamento.contraindicaciones}"
+
+        return mensaje

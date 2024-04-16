@@ -29,6 +29,10 @@ class MedicamentoVentaRestringida(Medicamento):
         self.__medico: Medico = None
 
     @property
+    def dosis_maxima(self):
+        return self.__dosis_maxima
+
+    @property
     def medico(self):
         return self.__medico
 
