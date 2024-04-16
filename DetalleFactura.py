@@ -37,8 +37,8 @@ class DetalleFactura:
         {self.medicamento.peso:5}\t\
         {self.medicamento.precio_neto:10}\t\
         {self.cantidad:8}\t\
-        {self.subtotal:2}\t\
-        {self.total:2}\n"
+        {self.subtotal:>10}\t\
+        {self.total:>2}\n"
 
         if type(self.medicamento) is MedicamentoVentaRestringida:
             mensaje = mensaje + self.texto_medicamento_restringido(self.medicamento)

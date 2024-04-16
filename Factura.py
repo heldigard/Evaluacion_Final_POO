@@ -46,7 +46,7 @@ class Factura:
         {'Peso':8}\t\
         {'Precio':8}\t\
         {'Cant':1}\t\
-        {'Subtotal':8}\t\
+        {'Subtotal':1}\t\
         {'Total':7}\n"
         for index, df in enumerate(self.detalles):
             factura += f"{index + 1} \t\
