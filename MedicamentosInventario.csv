@@ -1,21 +1,21 @@
-﻿SKU;Nombre comercial;Nombre genérico;Precio neto ($);Peso (g);Cantidad;Es Restringido;Dosis_max_dia;Containdicaciones
-MED001;Acetaminofén;Paracetamol;1500;10 mg;20;No;;enfermedad hepática grave| enfermedad renal con uremia
-MED002;Ibuprofeno;Ibuprofeno;2000;200 mg;10;No;;úlceras| hemorragias
-MED003;Aspirina;AAS;1000;500 mg;30;No;;úlcera gastrointestinal| molestias gástricas de repetición 
-MED004;Loratadina;Loratadina;5000;10 mg;15;No;;insuficiencia hepática| asma aguda
-MED005;Cetirizina;Cetirizina;4000;10 mg;20;No;;somnolencia| cansancio excesivo
-MED006;Omeprazol;Omeprazol;7000;20 mg;14;No;;sarpullido| urticaria
-MED007;Metformina;Metformina;3500;500 mg;30;Sí;650 mg;
-MED008;Losartan;Losartan;8000;50 mg;30;Sí;750 mg ;
-MED009;Atorvastatina;Atorvastatina;12000;10 mg;30;Sí;300 mg;
-MED010;Alprazolam;Alprazolam;6000;0.5 mg;30;Sí;290 mg;
-MED011;Diazepam;Diazepam;4500;5 mg;20;Sí;120 mg;
-MED012;Amoxicilina;Amoxicilina;8500;500 mg;20;Sí;700 mg;
-MED013;Azitromicina;Azitromicina;11000;500 mg;6;Sí;860 mg;
-MED014;Ciprofloxacino;Ciprofloxacino;9000;500 mg;10;Sí;75 mg;
-MED015;Levotiroxina;Levotiroxina;5500;100 mcg;30;Sí;67 mcg;
-MED016;Salbutamol;Salbutamol;4000;100 mcg/ml;1;No;;diabetes mellitus| infecciones virales
-MED017;Dexametasona;Dexametasona;3000;0.5 mg;20;Sí;85 mg;
-MED018;Prednisona;Prednisona;2500;5 mg;30;Sí;150 mg;
-MED019;Fluoxetina;Fluoxetina;1200;100 mg;10;Sí;20mg;somnolencia| cansancio excesivo
-MED020;Keppra;Levetiracetam;1000;500 mg;30;Sí;60mg;nasofaringitis | somnolencia
+﻿SKU,Nombre comercial,Nombre genérico,Precio neto ($),Peso (g),Cantidad,Es Restringido,Dosis_max_dia,Containdicaciones
+MED001,Acetaminofén,Paracetamol,1500,10 mg,20,No,,enfermedad hepática grave| enfermedad renal con uremia
+MED002,Ibuprofeno,Ibuprofeno,2000,200 mg,10,No,,úlceras| hemorragias
+MED003,Aspirina,AAS,1000,500 mg,30,No,,úlcera gastrointestinal| molestias gástricas de repetición 
+MED004,Loratadina,Loratadina,5000,10 mg,15,No,,insuficiencia hepática| asma aguda
+MED005,Cetirizina,Cetirizina,4000,10 mg,20,No,,somnolencia| cansancio excesivo
+MED006,Omeprazol,Omeprazol,7000,20 mg,14,No,,sarpullido| urticaria
+MED007,Metformina,Metformina,3500,500 mg,30,Sí,650 mg,
+MED008,Losartan,Losartan,8000,50 mg,30,Sí,750 mg ,
+MED009,Atorvastatina,Atorvastatina,12000,10 mg,30,Sí,300 mg,
+MED010,Alprazolam,Alprazolam,6000,0.5 mg,30,Sí,290 mg,
+MED011,Diazepam,Diazepam,4500,5 mg,20,Sí,120 mg,
+MED012,Amoxicilina,Amoxicilina,8500,500 mg,20,Sí,700 mg,
+MED013,Azitromicina,Azitromicina,11000,500 mg,6,Sí,860 mg,
+MED014,Ciprofloxacino,Ciprofloxacino,9000,500 mg,10,Sí,75 mg,
+MED015,Levotiroxina,Levotiroxina,5500,100 mcg,30,Sí,67 mcg,
+MED016,Salbutamol,Salbutamol,4000,100 mcg/ml,1,No,,diabetes mellitus| infecciones virales
+MED017,Dexametasona,Dexametasona,3000,0.5 mg,20,Sí,85 mg,
+MED018,Prednisona,Prednisona,2500,5 mg,30,Sí,150 mg,
+MED019,Fluoxetina,Fluoxetina,1200,100 mg,10,Sí,20mg,somnolencia| cansancio excesivo
+MED020,Keppra,Levetiracetam,1000,500 mg,30,Sí,60mg,nasofaringitis | somnolencia
