@@ -1,4 +1,5 @@
 from Cliente import Cliente
+from datetime import datetime
 
 
 class Factura:
@@ -6,6 +7,7 @@ class Factura:
     razon_social = "Droguería EIA SAS BIC"
 
     def __init__(self):
+        self.fecha = datetime.today()
         self.__cliente: Cliente = None
         self.subtotal = 0
         self.total = 0
@@ -41,15 +43,30 @@ class Factura:
 
     def __str__(self):
         factura = f"{self.empresa}\n\n"
-        factura += f"{'#Item':1}\t\
+        factura += f"Fecha: {self.fecha}\n\n"
+        factura += f"Info Cliente\n"
+        factura += self.texto_cliente()
+        factura += f"{self.cliente}\n\n"
+        factura += self.texto_encabezado()
+
+        for index, df in enumerate(self.detalles):
+            factura += f"{index + 1} \t\
+            {df}"
+        factura += f"\nSubtotal: {self.subtotal}\nTotal: {self.total}\n\n"
+
+        return factura
+
+    def texto_encabezado(self):
+        return f"{'#Item':1}\t\
         {'Nombre':20}\t\
         {'Peso':8}\t\
         {'Precio':8}\t\
         {'Cant':1}\t\
         {'Subtotal':1}\t\
         {'Total':7}\n"
-        for index, df in enumerate(self.detalles):
-            factura += f"{index + 1} \t\
-            {df}"
-        factura += f"\nSubtotal: {self.subtotal}\nTotal: {self.total}\n"
-        return factura
+
+    def texto_cliente(self):
+        return f"{'Cedula':10}\t\
+        {'Nombre':20}\t\
+        {'Telefono':18}\t\
+        {'Direccion':10}\n"
