@@ -84,7 +84,7 @@ class Drogueria:
             medicamento = self.__inventario[sku]
             resumen = f"{sku:2}\t\
             {medicamento.nombre_comercial:25}\t\
-            {medicamento.cantidad}"
+            {medicamento.cantidad_stock}"
             print(resumen)
 
     def mostrar_clientes(self):
@@ -115,8 +115,8 @@ class Drogueria:
 
     def vender_medicamento(self, sku, cantidad):
         if sku in self.__inventario:
-            if self.__inventario[sku].cantidad >= cantidad:
-                self.__inventario[sku].cantidad -= cantidad
+            if self.__inventario[sku].cantidad_stock >= cantidad:
+                self.__inventario[sku].cantidad_stock -= cantidad
                 return True
             else:
                 return False

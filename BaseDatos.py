@@ -28,7 +28,7 @@ def leer_inventario_desde_archivo(ruta) -> dict:
                     nombre_generico=nombre_generico,
                     precio_neto=float(precio_neto),
                     peso=peso,
-                    cantidad=int(cantidad),
+                    cantidad_stock=int(cantidad),
                     es_restringido=es_restringido,
                     dosis_maxima=dosis_maxima,
                 )
@@ -39,7 +39,7 @@ def leer_inventario_desde_archivo(ruta) -> dict:
                     nombre_generico=nombre_generico,
                     precio_neto=float(precio_neto),
                     peso=peso,
-                    cantidad=int(cantidad),
+                    cantidad_stock=int(cantidad),
                     es_restringido=es_restringido,
                     contraindicaciones=contraindicaciones
                 )

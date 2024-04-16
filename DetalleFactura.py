@@ -31,4 +31,8 @@ class DetalleFactura:
         return self.__medicamento.precio_neto * self.__cantidad
 
     def __str__(self):
-        return f"{self.medicamento}\t{self.cantidad:<8}\t{self.subtotal:<8}\t{self.total:<7}\n"
+        return f"{self.medicamento.nombre_comercial:25}\t\
+        {self.medicamento.peso:8}\t\
+        {self.cantidad:<8}\t\
+        {self.subtotal:<2}\t\
+        {self.total:<2}\n"

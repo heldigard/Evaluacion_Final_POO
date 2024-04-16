@@ -9,7 +9,7 @@ class MedicamentoVentaLibre(Medicamento):
             nombre_generico,
             precio_neto,
             peso,
-            cantidad,
+            cantidad_stock,
             es_restringido,
             contraindicaciones,
             impuesto=0.19
@@ -20,7 +20,7 @@ class MedicamentoVentaLibre(Medicamento):
             nombre_generico=nombre_generico,
             precio_neto=precio_neto,
             peso=peso,
-            cantidad=cantidad,
+            cantidad_stock=cantidad_stock,
             es_restringido=es_restringido,
             impuesto=impuesto
         )

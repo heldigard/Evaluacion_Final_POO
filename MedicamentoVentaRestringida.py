@@ -10,7 +10,7 @@ class MedicamentoVentaRestringida(Medicamento):
             nombre_generico,
             precio_neto,
             peso,
-            cantidad,
+            cantidad_stock,
             es_restringido,
             dosis_maxima,
             impuesto=0.19
@@ -20,7 +20,7 @@ class MedicamentoVentaRestringida(Medicamento):
             nombre_comercial=nombre_comercial,
             nombre_generico=nombre_generico,
             peso=peso,
-            cantidad=cantidad,
+            cantidad_stock=cantidad_stock,
             es_restringido=es_restringido,
             precio_neto=precio_neto,
             impuesto=impuesto

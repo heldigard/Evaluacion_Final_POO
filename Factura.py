@@ -41,14 +41,15 @@ class Factura:
 
     def __str__(self):
         factura = f"{self.empresa}\n\n"
-        factura += f"{'Código':6}\t\
+        factura += f"{'#Item':1}\t\
+        {'Código':8}\t\
         {'Nombre':15}\t\
-        {'Precio':7}\t\
-        {'Impuesto':8}\t\
+        {'Precio':4}\t\
         {'Cantidad':8}\t\
         {'Subtotal':8}\t\
         {'Total':7}\n"
-        for df in self.detalles:
-            factura += f"{df}"
+        for index, df in enumerate(self.detalles):
+            factura += f"{index + 1} \t\
+            {df}"
         factura += f"\nSubtotal: {self.subtotal}\nTotal: {self.total}\n"
         return factura
