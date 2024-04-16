@@ -51,7 +51,7 @@ class DetalleFactura:
     def texto_medicamento_restringido(self, medicamento: MedicamentoVentaRestringida):
         mensaje = f"Dosis: {medicamento.dosis_maxima:7}\t"
         if medicamento.medico:
-            mensaje = mensaje + f"Medico: {self.__medico}"
+            mensaje = mensaje + f"Medico: {medicamento.medico}"
 
         return mensaje
 
