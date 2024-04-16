@@ -25,18 +25,15 @@ class DetalleFactura:
         return self.__total
 
     def calcular_total(self):
-        print(f'Precio neto: {self.__medicamento.precio_neto}')
-        print(f'Bruto: {self.__medicamento.precio_neto*(self.__medicamento.impuesto+1)}')
-        print(f'Total: {self.__medicamento.precio_neto*(self.__medicamento.impuesto+1)*self.__cantidad}')
-        return (self.__medicamento.precio_neto*(self.__medicamento.impuesto+1)) * self.__cantidad
+        return (self.__medicamento.precio_neto * (self.__medicamento.impuesto + 1)) * self.__cantidad
 
     def calcular_subtotal(self):
         return self.__medicamento.precio_neto * self.__cantidad
 
     def __str__(self):
-        return f"{self.medicamento.nombre_comercial:<20}\t\
-        {self.medicamento.peso:<8}\t\
-        {self.medicamento.precio_neto:<10}\t\
-        {self.cantidad:<8}\t\
-        {self.subtotal:<2}\t\
-        {self.total:<2}\n"
+        return f"{self.medicamento.nombre_comercial:20}\t\
+        {self.medicamento.peso:8}\t\
+        {self.medicamento.precio_neto:10}\t\
+        {self.cantidad:8}\t\
+        {self.subtotal:2}\t\
+        {self.total:2}\n"

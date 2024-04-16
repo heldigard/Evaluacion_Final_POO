@@ -73,7 +73,7 @@ class Drogueria:
 
     def mostrar_inventario_cantidades(self):
         cabecera = f"{'SKU':2}\t\
-                {'Nombre Comercial':20}\t\
+                {'Nombre Comercial':15}\t\
                 {'Cant':1}\t"
         print("\nResumen de Medicamentos")
         print('-' * (len(cabecera) + 5))
@@ -83,7 +83,7 @@ class Drogueria:
         for sku in self.__inventario.keys():
             medicamento = self.__inventario[sku]
             resumen = f"{sku:2}\t\
-            {medicamento.nombre_comercial:25}\t\
+            {medicamento.nombre_comercial:20}\t\
             {medicamento.cantidad_stock}"
             print(resumen)
 

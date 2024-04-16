@@ -20,5 +20,5 @@ class Persona:
         self.__telefono = telefono
 
     def __str__(self):
-        return f"{self.__nombre:25}\t\
+        return f"{self.__nombre:20}\t\
         {self.telefono:13}\t"

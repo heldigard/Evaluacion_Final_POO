@@ -62,8 +62,8 @@ class Medicamento:
 
     def __str__(self):
         return f"{self.__sku:8}\t\
-        {self.__nombre_comercial:25}\t\
-        {self.__nombre_generico:25}\t\
+        {self.__nombre_comercial:20}\t\
+        {self.__nombre_generico:20}\t\
         {self.__precio_neto:10}\t\t\
         {self.__peso:8}\t\
         {self.__cantidad_stock:10}\t\t\t\

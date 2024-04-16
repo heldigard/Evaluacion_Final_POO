@@ -42,12 +42,12 @@ class Factura:
     def __str__(self):
         factura = f"{self.empresa}\n\n"
         factura += f"{'#Item':1}\t\
-        {'Nombre':<20}\t\
-        {'Peso':<1}\t\
-        {'Precio':<1}\t\
-        {'Cant':<1}\t\
-        {'Subtotal':<8}\t\
-        {'Total':<7}\n"
+        {'Nombre':20}\t\
+        {'Peso':1}\t\
+        {'Precio':1}\t\
+        {'Cant':1}\t\
+        {'Subtotal':8}\t\
+        {'Total':7}\n"
         for index, df in enumerate(self.detalles):
             factura += f"{index + 1} \t\
             {df}"
