@@ -43,8 +43,8 @@ class Factura:
         factura = f"{self.empresa}\n\n"
         factura += f"{'#Item':1}\t\
         {'Nombre':20}\t\
-        {'Peso':1}\t\
-        {'Precio':1}\t\
+        {'Peso':8}\t\
+        {'Precio':8}\t\
         {'Cant':1}\t\
         {'Subtotal':8}\t\
         {'Total':7}\n"

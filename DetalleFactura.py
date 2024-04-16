@@ -34,7 +34,7 @@ class DetalleFactura:
 
     def __str__(self):
         mensaje = f"{self.medicamento.nombre_comercial:20}\t\
-        {self.medicamento.peso:8}\t\
+        {self.medicamento.peso:5}\t\
         {self.medicamento.precio_neto:10}\t\
         {self.cantidad:8}\t\
         {self.subtotal:2}\t\
