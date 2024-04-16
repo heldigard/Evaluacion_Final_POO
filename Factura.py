@@ -1,5 +1,6 @@
 from Cliente import Cliente
 from datetime import datetime
+import random as ramdom
 
 
 class Factura:
@@ -7,6 +8,7 @@ class Factura:
     razon_social = "Droguería EIA SAS BIC"
 
     def __init__(self):
+        self.id = ramdom.randint(1000, 9999)
         self.fecha = datetime.today()
         self.__cliente: Cliente = None
         self.subtotal = 0
@@ -42,7 +44,10 @@ class Factura:
         self.total = self.calcular_total()
 
     def __str__(self):
-        factura = f"{self.empresa}\n\n"
+        factura = f"{self.empresa}\n"
+        factura += f"NIT: {self.nit}\n"
+        factura += f"Razon Social: {self.razon_social}\n\n"
+        factura += f"Factura: {self.id}\n"
         factura += f"Fecha: {self.fecha}\n\n"
         factura += f"Info Cliente\n"
         factura += self.texto_cliente()
