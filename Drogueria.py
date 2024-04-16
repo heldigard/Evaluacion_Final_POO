@@ -3,6 +3,9 @@ from Factura import Factura
 
 
 class Drogueria:
+    nit = "901456234-8"
+    razon_social = "Droguería EIA SAS BIC"
+    empresa = "Droguería EIA SAS BIC"
 
     def __init__(self, nombre, nit, telefono, ):
         self.__nombre = nombre

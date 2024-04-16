@@ -4,16 +4,15 @@ import random as ramdom
 
 
 class Factura:
-    nit = "901456234-8"
-    razon_social = "Droguería EIA SAS BIC"
-
-    def __init__(self):
+    def __init__(self, empresa, nit, razon_social):
         self.id = ramdom.randint(1000, 9999)
+        self.empresa = empresa
+        self.nit = nit
+        self.razon_social = razon_social
         self.fecha = datetime.today()
         self.__cliente: Cliente = None
         self.subtotal = 0
         self.total = 0
-        self.empresa = "Droguería EIA SAS BIC"
         self.detalles = []
 
     @property
